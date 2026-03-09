@@ -53,7 +53,7 @@
             placeholder=" Search issues..."
             class="input input-bordered outline-none w-42 md:w-fit"
           />
-          <button class="btn btn-primary">+ New Issue</button>
+          <button id="logOut" class="btn btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</button>
         </div>
       </div>
     </nav>
@@ -64,8 +64,8 @@
         <button  id="openBtn" class="btn">Open</button>
         <button id="closedBtn" class="btn">Closed</button>
       </div>
-      
-       <!-- issues count section -->
+     
+      <!-- issues count section -->
       <section class="px-2 py-5 md:py-10 rounded shadow-sm mt-2 md:mt-5">
         <div class="flex flex-col md:flex-row items-center justify-between">
           <div class="left-side flex flex-col md:flex-row items-center gap-1">
@@ -95,6 +95,63 @@
           </div>
         </div>
       </section>
+
+      <!--by default all card section -->
+      <section id="cardContainer" class=" mx-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+      
+          <div class="flex justify-between">
+            <img src="./assets/Open-Status.png" alt="" />
+            <h1 class="text-red-500 py-2 px-5 md:px-8 bg-red-100 rounded-full md:text-xl font-bold">HIGH</h1>
+          </div>
+          <div class="space-y-2">
+            <h1 class="text-2xl font-bold">
+              Fix navigation menu on mobile devices
+            </h1>
+            <p class="text-gray-400 line-clamp-2">
+              The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <p class="btn bg-red-100 rounded-full border border-red-500 text-red-500 font-bold">
+              <span><i class="fa-solid fa-bug"></i></span> BUG
+            </p>
+            <p class=" bg-yellow-100 rounded-full  border border-yellow-500 text-yellow-500 font-bold">
+              <span><i class="fa-regular fa-life-ring"></i></span> help wanted
+            </p>
+          </div>
+          <div class="divider"></div>
+          <div class="space-y-2">
+            <p>#1by john_doe</p>
+            <p>1/01/2026</p>
+          </div>
+        </div>
+      </section>
+        
+      <section id="spinner" class="flex items-center justify-center py-20 hidden">
+        <span class="loading loading-bars loading-xl"></span>
+      </section>
+
+      
+       <section id="openCards" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 hidden">
+
+       </section>
+      
+       <section id="closedCards" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 hidden">
+
+       </section>
+
+       
+        <section >
+            
+            <dialog id="issues_modal" class="modal modal-bottom sm:modal-middle ">
+              <div id="modal" >
+  
+              </div>
+            </dialog>
+        </section>
+
+    
     </main>
+    
   </body>
 </html>
